@@ -1,0 +1,19 @@
+.restaurent-logo{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 40px;
+    left: 50px;
+}
+
+.aot-image-hero{
+    background-image: url(/asetts/img/Rectangle_11.png);
+    background-size: cover;
+    width: 1440px;
+    height: 510px;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,55 @@
+header {
+    width: 1940px;
+    height: 130px;
+   background-color:#E76C1F ;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.main-container-section{
+    width: calc(100% - 308px);
+}
+
+.aot-image-hero{
+    background-image: url(/assets/img/hero/Rectangle_11.png);
+    background-size: cover;
+    width: 1940px;
+    height: 510px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.aot-ellipse{
+    width: 200px;
+    height: 200px;
+
+}
+
+.aot-ellipse-container{
+    display: flex;
+    position: relative;
+    top: 90px;
+}
+
+.restaurant-description{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    left: 140px;
+}
+
+.dishe-title{
+    background-color: #E76C1F;
+    height: 60px;
+    width: 1940px;
+}

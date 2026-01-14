@@ -1,0 +1,20 @@
+:root{
+    --orange_background_color: #E76C1F;
+    --div_container_bg-color:#FDEADC;
+    --basket_container_bg-color: #FDEADC;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    
+}
+
+body{
+   width: 100%;
+}
+
+h1{
+    font-family: palanquin;
+    font-weight: bold;
+}
