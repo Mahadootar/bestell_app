@@ -18,5 +18,12 @@ body{
 
 h1{
     font-family: palanquin;
-    font-weight: bold;
+    font-size: xxx-large;
+}
+
+h2{
+    font-family: palanquin;
+    font-size: xx-large;
+    color: white;
+
 }

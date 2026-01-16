@@ -10,7 +10,7 @@ main{
     height: 100%;
 }
 
-.main-container-section{
+.aot-container-section{
     width: calc(100% - 308px);
 }
 
@@ -50,6 +50,23 @@ main{
 
 .dishe-title{
     background-color: #E76C1F;
-    height: 60px;
+    height: 70px;
     width: 1940px;
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+
+.dishes_title_img{
+    width: 88px;
+    height: 90px;
+}
+
+
+.food_photo{
+    height: 120px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    
 }
