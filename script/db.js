@@ -3,7 +3,7 @@ let allDishes = [
         "name":"Veggie mushroom black burger",
         "description":"Mixed green, Tomatoes, Edamame",
         "price":"16",
-        "image":"Vegie_mushroom_black_burger.png",
+        "image":"black_burger.png",
     },
     {
         "name":"All meat burger",
