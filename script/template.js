@@ -1,7 +1,7 @@
 function dishesTemplate(dishesIndex){
     return `<div class="dishe_element">
      <div class="dish_img">
-      <img class="food_photo" src="/assets/img/Food_img/Vegie_mushroom_black_burger.png">
+      <img class="food_photo" src="/assets/img/Food_img/${allDishes[dishesIndex].image}">
      </div>
      <h3>${allDishes[dishesIndex].name}</h3>
      <p>${allDishes[dishesIndex].description}<p/>
