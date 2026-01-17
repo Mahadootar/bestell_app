@@ -1,5 +1,5 @@
 function init(){
- dishesTemplate();
+ renderDishes();
 }
 
 function renderDishes(){
