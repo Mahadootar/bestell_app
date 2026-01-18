@@ -54,6 +54,7 @@ main{
     align-items: center;
     flex-direction: column;
     width: 1940px;
+    margin-bottom: 50px;
 }
 
 .evaluation_logo{
@@ -78,6 +79,7 @@ main{
     display: flex;
     align-items: center;
     gap: 250px;
+    margin: 20px 0px;
 }
 
 .dishes_title_img{
@@ -92,4 +94,9 @@ main{
     object-fit: cover;
     border-radius: 12px;
     
+}
+
+#dishes_container{
+    padding-top: 20px;
+    padding-left: 100px;
 }
