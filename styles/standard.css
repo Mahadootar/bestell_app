@@ -27,3 +27,38 @@ h2{
     color: white;
 
 }
+
+header {
+    width: 1940px;
+    height: 130px;
+   background-color:#E76C1F ;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+footer{
+    width: 100%;
+    padding: 16px 64px;
+    background-color:#E76C1F;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30px;
+
+}
+
+.footer_content{
+    display: flex;
+    gap: 30px;
+}
+
+.ptag_footer{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
