@@ -48,8 +48,27 @@ main{
     left: 140px;
 }
 
+.the_container_con_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1940px;
+}
+
+.evaluation_logo{
+    object-fit: contain;
+}
+
+.Burger_haus_name{
+    display: flex;
+    gap: 10px;
+}
+
 .name_of-the_haus{
-    margin: 70px 0;
+   margin-top: 80px;
+   margin-bottom: 20px;
+   
 }
 
 .dishe-title{
