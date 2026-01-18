@@ -21,11 +21,19 @@ h1{
     font-size: xxx-large;
 }
 
+.logo_name .haus{
+    color: #E76C1F;
+}
+
 h2{
     font-family: palanquin;
     font-size: xx-large;
     color: white;
 
+}
+
+.ptag_haus{
+    font-size: larger;
 }
 
 header {
