@@ -105,3 +105,10 @@ main{
     display: flex;
     gap: 30px;
 }
+
+footer{
+    width: 100%;
+    padding: 16px 64px;
+    background-color:#E76C1F;
+    height: 100px
+}
