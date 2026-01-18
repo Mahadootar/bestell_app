@@ -100,3 +100,8 @@ main{
     padding-top: 20px;
     padding-left: 100px;
 }
+
+.dishe_element{
+    display: flex;
+    gap: 30px;
+}
