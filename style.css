@@ -42,7 +42,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 1940px;
+    width: 100%;
     margin-bottom: 50px;
 }
 
@@ -64,11 +64,12 @@
 .dishe-title{
     background-color: #E76C1F;
     height: 70px;
-    width: 1940px;
+    width: 1400px;
     display: flex;
     align-items: center;
     gap: 250px;
     margin: 20px 0px;
+
 }
 
 .dishes_title_img{
@@ -88,9 +89,18 @@
 #dishes_container{
     padding-top: 20px;
     padding-left: 100px;
+    width: 710px;
 }
 
 .dishe_element{
     display: flex;
     gap: 30px;
+    background-color: #FDEADC;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.dish_img{
+    padding-left: 5px;
 }
