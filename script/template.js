@@ -7,9 +7,10 @@ function dishesTemplate(dishesIndex){
      <h3>${allDishes[dishesIndex].name}</h3>
      <p>${allDishes[dishesIndex].description}</p>
      <div class="dish_bottom">
-     <p>${allDishes[dishesIndex].price}</p>
+     <p class="price_class">${allDishes[dishesIndex].price}</p>
      <div>
-     <button class="add_to_basket_btn" onclick="addToBasket(${dishesIndex})">In den Warenkorb</button>
+     <button class="add_to_basket_btn" onclick="addToBasket(${dishesIndex})">
+     <img src="./assets/icons/button_add.png"</button>
      </div>
      </div>
      </div>
