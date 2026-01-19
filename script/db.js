@@ -72,3 +72,54 @@ let allDishes = [
         "image":"Vegan_salad_tofu.png",
     },
 ]
+
+const shopping_container = [
+    {
+        "name":"Veggie mushroom black burger",
+        "number": 0,
+    },
+    {
+        "name":"All meat burger",
+        "number": 0,
+    },
+    {
+        "name":"Beef red burger",
+        "number": 0,
+    },
+    {
+        "name":"Big chicken burger",
+        "number": 0,
+    },
+    {
+        "name":"Pizza margherita",
+        "number": 0,
+    },
+    {
+        "name":"Pizza Chorizo",
+        "number": 0,
+    },
+    {
+        "name":"Funghi",
+        "number": 0,
+    },
+    {
+        "name":"Quatro Formaggi with Chicken",
+        "number": 0,
+    },
+    {
+        "name":"Warm beef argula sald",
+        "number": 0,
+    },
+    {
+        "name":"Mini green Salad",
+        "number": 0,
+    },
+    {
+        "name":"Green Salad with Sea food",
+        "number": 0,
+    },
+    {
+        "name": "Vegan green salad with tofu",
+        "number": 0,
+    },
+]

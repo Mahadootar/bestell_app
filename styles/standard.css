@@ -78,6 +78,13 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    top: 25px;
+    top: 40px;
     right: 25px;
+}
+
+nav .bar{
+   display: block;
+   width: 100%;
+   height: 3px;
+   background-color: white;
 }

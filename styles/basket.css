@@ -1,6 +1,10 @@
 .basket-section{
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 710px;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
     
 }
