@@ -3,10 +3,16 @@ function dishesTemplate(dishesIndex){
      <div class="dish_img">
       <img class="food_photo" src="./assets/img/Food_img/${allDishes[dishesIndex].image}">
      </div>
-     <div>
+     <div class="dish_text">
      <h3>${allDishes[dishesIndex].name}</h3>
-     <p>${allDishes[dishesIndex].description}<p/>
-     <p>${allDishes[dishesIndex].price}<p/>
+     <p>${allDishes[dishesIndex].description}</p>
+     <div class="dish_bottom">
+     <p>${allDishes[dishesIndex].price}</p>
+     <div>
+     <button class="add_to_basket_btn" onclick="addToBasket(${dishesIndex})">In den Warenkorb</button>
      </div>
-    </div>`
+     </div>
+     </div>
+    </div>
+    `;
 }

@@ -1,6 +1,6 @@
 .basket-section{
     width: 300px;
-    height: 710px;
+    height: auto;
     padding: 5px;
     display: flex;
     align-items: center;
