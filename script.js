@@ -28,3 +28,13 @@ function renderDishes(){
         refDishesContainer.innerHTML += dishesTemplate(dishesIndex)
     }
 }
+
+function formatToTheCurrency(value){
+    return value.toFixed(2).replace('.',',') + '€';
+
+   
+}
+
+function addToBasket(dishesIndex){
+    
+}
