@@ -1,21 +1,44 @@
 function init(){
  renderAll();
+  renderDishesSection('dishes_container', allDishes, getDishesTemplate);
 }
 
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
-    
 }
 
 function  renderDishesSection(containerId, dataArray, templateFunction){
     let refContainer = document.getElementById(containerId);
     refContainer.innerHTML = "";
-    console.log(containerId, refContainer);
     
-
-    for (let index = 0; index < dataArray.length; index++){
-         refContainer.innerHTML += templateFunction(index);
+     for (let catIndex = 0; catIndex < dataArray.length; catIndex++) {
+    for (let dishesIndex = 0; dishesIndex < dataArray[catIndex].dishes.length; dishesIndex++){
+         refContainer.innerHTML += templateFunction(catIndex, dishesIndex);
     }
+}
+}
+
+function renderBasket(){
+    const basketContenRef = document.getElementById('basket_dish');
+    basketContenRef.innerHTML = "";
+
+    if (cartShopping.length === 0){
+        basketContenRef.innerHTML = `<div> <h3> Dein Warenkorb ist leer</h3>
+    <img class="empty_baskett" src="./assets/icons/empty_basket.png">
+    `;
+    return;    
+    }
+    
+    for (let i = 0; i < cartShopping.length; i++) {
+        const item = cartShopping[i]
+        basketContenRef.innerHTML += `
+        <div> 
+        <span>${item.amount}x${item.name}</span>
+        <div> <img src="./assets/icons/delete_order.png">
+        <span>${formatToTheCurrency(item.price * item.amount)}</span>`
+        
+    }
+
 }
 
 
