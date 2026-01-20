@@ -26,7 +26,7 @@ function basketDishesTemplate(basketIndex){
      <div class="dish_bottom">
      <p class="price_class">${formatToTheCurrency(Number(shopping_container[basketIndex].price))}</p>
      <div>
-     <button class="add_to_basket_btn" onclick="addToBasket(${shopping_container})">
+     <button class="add_to_basket_btn" onclick="addToBasket(${basketIndex})">
      <img src="./assets/icons/button_add.png"</button>
      </div>
      </div>
