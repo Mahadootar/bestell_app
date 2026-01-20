@@ -42,6 +42,6 @@ function formatToTheCurrency(value){
 
 function addToBasket(dishesIndex){
     shopping_container[dishesIndex].number++
-    renderAll()
+    renderAll();
 
 }
