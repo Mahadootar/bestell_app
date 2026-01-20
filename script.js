@@ -4,35 +4,20 @@ function init(){
 
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
-    renderDishesSection('basket_content', shopping_container, basketDishesTemplate);
+    renderDishesSection('basket_content', cartShopping, basketDishesTemplate);
 }
 
-function renderDishesSection(refDishesContainerId, allDishesIndex, templateF ){
-    let refDishesContainer = document.getElementById(refDishesContainerId);
-    refDishesContainer.innerHTML = "";
+function  renderDishesSection(containerId, dataArray, templateFunction){
+    let refContainer = document.getElementById(containerId);
+    refContainer.innerHTML = "";
+    console.log(containerId, refContainer);
+    
 
-    for (let index = 0; index < allDishesIndex.length; index++) { 
-        if(index == 0){
-            refDishesContainer.innerHTML += `
-            <div class="dishe-title">
-            <img src="./assets/img/Food_img/Chanese_1.png">
-            </div>`;
-        }
-        if(index == 4){
-            refDishesContainer.innerHTML += `
-            <div class="dishe-title">
-            <img src="./assets/img/Food_img/pizza_1.png">
-            </div>`;
-        }
-        if(index == 8){
-            refDishesContainer.innerHTML += `
-            <div class="dishe-title">
-            <img src="./assets/img/Food_img/salad_1.png">
-            </div>`;
-        }
-        refDishesContainer.innerHTML += templateF(index)
+    for (let index = 0; index < dataArray.length; index++){
+         refContainer.innerHTML += templateFunction(index);
     }
 }
+
 
 function formatToTheCurrency(value){
     return value.toFixed(2).replace('.',',') + '€';
@@ -45,3 +30,4 @@ function addToBasket(dishesIndex){
     renderAll();
 
 }
+

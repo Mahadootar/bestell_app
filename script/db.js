@@ -1,7 +1,7 @@
 let allDishes = [
  {
-    "catergory":"Burger",
-    "category-image":"img/pfad",
+    "category":"Burger",
+    "categoryImage":"img/pfad",
     "dishes":[
     {
         "name":"Veggie mushroom black burger",
@@ -30,8 +30,8 @@ let allDishes = [
     ]
 },
 {
-     "catergory":"pizza",
-    "category-image":"img/pfad",
+     "category":"pizza",
+    "categoryImage":"img/pfad",
     "dishes":[
      {
         "name":"Pizza margherita",
@@ -61,8 +61,8 @@ let allDishes = [
 },
 {
     
-    "catergory":"Burger",
-    "category-image":"img/pfad",
+    "category":"Salad",
+    "categoryImage":"img/pfad",
     "dishes":[
         {
         "name":"Warm beef argula sald",
@@ -92,6 +92,6 @@ let allDishes = [
 }   
 ]
 
-const shopping_container = [
+const cartShopping = [
     
 ]
