@@ -4,7 +4,7 @@ function init(){
 
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
-    renderDishesSection('basket_content', cartShopping, basketDishesTemplate);
+    
 }
 
 function  renderDishesSection(containerId, dataArray, templateFunction){

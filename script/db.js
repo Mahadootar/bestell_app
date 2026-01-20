@@ -1,7 +1,7 @@
 let allDishes = [
  {
     "category":"Burger",
-    "categoryImage":"img/pfad",
+    "categoryImage":"Chanese_1.png",
     "dishes":[
     {
         "name":"Veggie mushroom black burger",
@@ -31,7 +31,7 @@ let allDishes = [
 },
 {
      "category":"pizza",
-    "categoryImage":"img/pfad",
+    "categoryImage":"Pizza_1.png",
     "dishes":[
      {
         "name":"Pizza margherita",
@@ -62,7 +62,7 @@ let allDishes = [
 {
     
     "category":"Salad",
-    "categoryImage":"img/pfad",
+    "categoryImage":"Salad_1-png",
     "dishes":[
         {
         "name":"Warm beef argula sald",
