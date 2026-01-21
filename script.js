@@ -1,6 +1,7 @@
 function init(){
  renderAll();
   renderDishesSection('dishes_container', allDishes, getDishesTemplate);
+  renderBasket();
 }
 
 function renderAll(){
@@ -48,8 +49,8 @@ function formatToTheCurrency(value){
    
 }
 
-function addToBasket(dishesIndex){
-    shopping_container[dishesIndex].number++
+function addToBasket(i){
+   cartShopping[i].number++
     renderAll();
 
 }
