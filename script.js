@@ -24,8 +24,9 @@ function renderBasket(){
     basketContenRef.innerHTML = "";
 
     if (cartShopping.length === 0){
-        basketContenRef.innerHTML = `<div> <h3> Dein Warenkorb ist leer</h3>
-    <img class="empty_baskett" src="./assets/icons/empty_basket.png">
+        basketContenRef.innerHTML = `<div>
+           <img class="empty_baskett" src="./assets/icons/empty_basket.png">
+           <h3> Dein Warenkorb ist leer</h3></div>
     `;
     return;    
     }
