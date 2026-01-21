@@ -30,7 +30,7 @@ let allDishes = [
     ]
 },
 {
-     "category":"pizza",
+     "category":"Pizza",
     "categoryImage":"Pizza_1.png",
     "dishes":[
      {  "id": 5,
@@ -95,3 +95,9 @@ let allDishes = [
 const cartShopping = [
     
 ]
+
+const categoryImages = {
+    Burger: "./assets/img/Chanese_1.png",
+    Pizza: "./assets/img/pizza_1.png",
+    Salad: "./assets/img/Salad_1.png",
+}
