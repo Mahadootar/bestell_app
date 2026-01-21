@@ -48,7 +48,7 @@ main{
     height: 100%;
 }
 
-footer{
+.the_footer{
     width: 100%;
     padding: 16px 64px;
     background-color:#E76C1F;

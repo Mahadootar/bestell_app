@@ -84,3 +84,20 @@
     cursor: pointer;
 }
 
+.remove_pin{
+    cursor: pointer;
+    background-color: #FDEADC;
+}
+
+.basket_dish_item{
+    background-color: #FDEADC;
+  
+}
+
+.item_name{
+    color: black;
+}
+
+#item_container{
+  
+}

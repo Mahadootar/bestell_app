@@ -34,10 +34,13 @@ function renderBasket(){
     for (let i = 0; i < cartShopping.length; i++) {
         const item = cartShopping[i]
         basketContenRef.innerHTML += `
-        <div> 
-        <span>${item.amount}x${item.name}</span>
-        <div> <img src="./assets/icons/delete_order.png">
-        <span>${formatToTheCurrency(item.price * item.amount)}</span>`
+        <div id="item_container"> 
+        <div class="basket_dish_item">
+        <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
+        <div> <img class="remove_pin" src="./assets/icons/delete_order.png">
+        <span><h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4></span></div>
+        </div>
+        </div> `
         
     }
 
@@ -50,9 +53,24 @@ function formatToTheCurrency(value){
    
 }
 
-function addToBasket(i){
-   cartShopping[i].number++
-    renderAll();
+function addToBasket(catIndex, dishesIndex){
+    const dish = allDishes[catIndex].dishes[dishesIndex];
+   
+    const existingIndex = cartShopping.findIndex(
+        item => item.id === dish.id
+    );
 
+    if (existingIndex !== -1) {
+        cartShopping[existingIndex].amount += 1;
+    }else{
+        cartShopping.push({
+            id: dish.id,
+            name: dish.name,
+            price: dish.price,
+            amount: 1
+
+        });
+    }
+    renderBasket();
 }
 
