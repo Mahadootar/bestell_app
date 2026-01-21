@@ -3,25 +3,25 @@ let allDishes = [
     "category":"Burger",
     "categoryImage":"Chanese_1.png",
     "dishes":[
-    {
+    {   "id": 1,
         "name":"Veggie mushroom black burger",
         "description":"Mixed green, Tomatoes, Edamame",
         "price":16,
         "image":"black_burger.png",
     },
-    {
+    {   "id": 2,
         "name":"All meat burger",
         "description":"Beef, Bacon, Dill pickels, Smkoed cheese, Ketchup, BBQ souse",
         "price":16,
         "image":"Meet_burger.png",
     },
-    {
+    {   "id": 3,
         "name":"Beef red burger",
         "description":"Beef, Cheese, Tomatoes, Lettuce, Onion",
         "price":17,
         "image":"Red_beef_burger.png",
     },
-    {
+    {   "id": 4,
         "name":"Big chicken burger",
         "description":"Chicken, Cheese, Tomaoes, Lettuce, onion, Bell, Pepper",
         "price":16,
@@ -33,25 +33,25 @@ let allDishes = [
      "category":"pizza",
     "categoryImage":"Pizza_1.png",
     "dishes":[
-     {
+     {  "id": 5,
         "name":"Pizza margherita",
         "description":"Tomato Suace, Mozzarella",
         "price":11,
         "image":"Margarita.png",
     },
-    {
+    {   "id": 6,
         "name":"Pizza Chorizo",
         "description":"Tomato slice, Mozzarello, Chorizo",
         "price":13,
         "image":"Pizza_Chrizo.png",
     },
-    {
+    {   "id":7,
         "name":"Funghi",
         "description":"Red Onion, Olives, Button Mushrooms, Mozzarello",
         "price":14,
         "image":"Pizza_funghi.png",
     },
-    {
+    {   "id": 8,
         "name":"Quatro Formaggi with Chicken",
         "description":"Chicken, Mozzarello, Gorgonzola, Fontina, Parmigiano Reggiono",
         "price":17,
@@ -64,25 +64,25 @@ let allDishes = [
     "category":"Salad",
     "categoryImage":"Salad_1-png",
     "dishes":[
-        {
+    {   "id":9,
         "name":"Warm beef argula sald",
         "description":"Beef, Argula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamic-vinegar dressing",
         "price":20,
         "image":"Beef_argula_salad.png",
     },
-    {
+    {   "id":10,
         "name":"Mini green Salad",
         "description":"Green salad, cucumber, Carrots, Parslex, Radishes",
         "price":18,
         "image":"Mini_green_salad.png",
     },
-    {
+    {   "id":11,
         "name":"Green Salad with Sea food",
         "description":"Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustardlemon dressing with dill",
         "price":22,
         "image":"Green_salad_with_seafood.png",
     },
-    {
+    {   "id": 12,
         "name":"Vegan green salad with tofu",
         "description":"Green salad, Cherry tomatoes, Cucumber, baby Spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
         "price":19,
