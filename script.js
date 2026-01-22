@@ -1,6 +1,5 @@
 function init(){
  renderAll();
-  renderDishesSection('dishes_container', allDishes, getDishesTemplate);
   renderBasket();
 }
 
@@ -17,11 +16,8 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
      for (let catIndex = 0; catIndex < dataArray.length; catIndex++) {
         const categoryName = dataArray[catIndex].category;
         const categoryImage = dataArray[catIndex].categoryImage;
-         refContainer.innerHTML += `
-         <div class="dishe-title">
-         <img src="${categoryImage}">
-         <h2 class="category_name">${categoryName}</h2>
-         </div>`
+         refContainer.innerHTML += getCategoryTemplateHeader(categoryName, categoryImage);
+         
     for (let dishesIndex = 0; dishesIndex < dataArray[catIndex].dishes.length; dishesIndex++){
          refContainer.innerHTML += templateFunction(catIndex, dishesIndex);
     }
@@ -37,36 +33,19 @@ function renderBasket(){
     itemsRef.innerHTML = "";
 
     if (cartShopping.length === 0){
-        emptyRef.classList.remove('d_none');
-        fullRef.classList.add('d_none');
-
-        emptyRef.innerHTML = `<div class="empty_state">
-        <h3 class="basket_h3">Your Basket is empty</h3>
-        <h3 class="basket_h3">Order NOW!!!</h3>
-           <img class="shop_cart_img" src="./assets/icons/empty_basket.png">
-           </div>
-    `;
+    emptyRef.classList.remove('d_none');
+    fullRef.classList.add('d_none');
+    emptyRef.innerHTML = getEmptyBasketTemplate() 
     return;    
     }
-     emptyRef.classList.add('d_none');
+    emptyRef.classList.add('d_none');
     fullRef.classList.remove('d_none');
-   
 
     let subtotal = 0;
-
     for (let i = 0; i < cartShopping.length; i++) {
         const item = cartShopping[i];
         subtotal += item.price * item.amount;
-
-        itemsRef.innerHTML += `
-          <div class="basket_dish_item">
-          <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
-          <div class="item_name_price"> <img class="remove_pin" src="./assets/icons/delete_order.png">
-          <div>
-           <h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4>
-           </div>
-            </div>
-        </div>`; 
+        itemsRef.innerHTML += getBasketItemTemplate(item, i);
     }
 
     const delivery = delivery_Fee
@@ -76,15 +55,10 @@ function renderBasket(){
     document.getElementById('Delivery_price').textContent = formatToTheCurrency(delivery);
     document.getElementById('total_price_order').textContent = formatToTheCurrency(total);
     document.getElementById('order_button').textContent = `Buy Now ${formatToTheCurrency(total)}`;
-    
-
 }
-
 
 function formatToTheCurrency(value){
     return value.toFixed(2).replace('.',',') + '€';
-
-   
 }
 
 function addToBasket(catIndex, dishesIndex){
@@ -108,8 +82,8 @@ function addToBasket(catIndex, dishesIndex){
     renderBasket();
 }
 
-function removeBasket(id){
-    cartShopping.splice(id, 1)
+function removeBasket(i){
+    cartShopping.splice(i, 1)
     renderBasket();
 
 }

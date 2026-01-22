@@ -12,3 +12,19 @@
 .item_name{
     color: white;
 }
+
+.add_to_basket_btn{
+    background-color:#FDEADC ;
+    border: none;
+    cursor: pointer;
+}
+
+.add_to_basket_img{
+    cursor: pointer;
+}
+
+.remove_pin{
+    cursor: pointer;
+    background-color: #FDEADC;
+}
+

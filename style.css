@@ -85,3 +85,51 @@
 .category_name{
     color: white;
 }
+
+.food_photo{
+    height: 120px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    
+}
+
+#dishes_container{
+    padding-top: 20px;
+    padding-left: 100px;
+    width: 710px;
+}
+
+.dishe_element{
+    display: flex;
+    gap: 30px;
+    background-color: #FDEADC;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.dish_img{
+    padding:5px
+}
+
+.dish_bottom{
+    display: flex;
+    flex: 1;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.price_class{
+    padding-right: 30px;
+}
+
+.dish_text{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}

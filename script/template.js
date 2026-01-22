@@ -21,3 +21,31 @@ function getDishesTemplate(catIndex, dishIndex){
     `;
 }
 
+function getCategoryTemplateHeader(categoryName, categoryImage){
+   return `<div class="dishe-title">
+         <img src="${categoryImage}">
+         <h2 class="category_name">${categoryName}</h2>
+   </div>`;
+}
+
+function getEmptyBasketTemplate(){
+  return `<div class="empty_state">
+        <h3 class="basket_h3">Your Basket is empty</h3>
+        <h3 class="basket_h3">Order NOW!!!</h3>
+           <img class="shop_cart_img" src="./assets/icons/empty_basket.png">
+           </div>
+    `;  
+}
+
+
+function getBasketItemTemplate(item, i){
+return `<div class="basket_dish_item">
+   <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
+      <div class="item_name_price">
+      <img class="remove_pin" onclick="removeBasket(${i})" src="./assets/icons/delete_order.png">
+      <div>
+       <h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4>
+      </div>
+   </div>
+</div>`; 
+}
