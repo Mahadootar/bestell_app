@@ -1,4 +1,3 @@
-
 .aot-container-section{
     width: calc(100% - 308px);
 }
@@ -47,11 +46,17 @@
 }
 
 .evaluation_logo{
-    object-fit: contain;
+    object-fit: cover;
+    width: 100px;
+    height: 24px;
+    display: flex;
+    border-radius: 10px;
+
 }
 
 .Burger_haus_name{
     display: flex;
+    align-items: baseline;
     gap: 10px;
 }
 
@@ -75,4 +80,8 @@
 .dishes_title_img{
     width: 88px;
     height: 90px;
+}
+
+.category_name{
+    color: white;
 }

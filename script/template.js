@@ -13,7 +13,7 @@ function getDishesTemplate(catIndex, dishIndex){
         <p class="price_class">${formatToTheCurrency(Number(dish.price))}</p>
      <div>
         <button class="add_to_basket_btn" onclick="addToBasket(${catIndex}, ${dishIndex})">
-        <img src="./assets/icons/button_add.png"></button>
+        <img class="add_to_basket_img" src="./assets/icons/button_add.png"></button>
      </div>
      </div>
      </div>

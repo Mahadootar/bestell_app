@@ -1,6 +1,6 @@
 let allDishes = [
  {
-    "category":"Burger",
+    "category":"Burger & Sandwich",
     "categoryImage":"./assets/img/Food_img/Chanese_1.png",
     "dishes":[
     {   "id": 1,

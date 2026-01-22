@@ -20,7 +20,7 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
          refContainer.innerHTML += `
          <div class="dishe-title">
          <img src="${categoryImage}">
-         <h2>${categoryName}</h2>
+         <h2 class="category_name">${categoryName}</h2>
          </div>`
     for (let dishesIndex = 0; dishesIndex < dataArray[catIndex].dishes.length; dishesIndex++){
          refContainer.innerHTML += templateFunction(catIndex, dishesIndex);
@@ -37,6 +37,7 @@ function renderBasket(){
     itemsRef.innerHTML = "";
 
     if (cartShopping.length === 0){
+        emptyRef.classList.remove('d_none');
         fullRef.classList.add('d_none');
 
         emptyRef.innerHTML = `<div class="empty_state">
@@ -47,13 +48,15 @@ function renderBasket(){
     `;
     return;    
     }
+     emptyRef.classList.add('d_none');
     fullRef.classList.remove('d_none');
+   
 
-    let totalPrice = 0;
+    let subtotal = 0;
 
     for (let i = 0; i < cartShopping.length; i++) {
         const item = cartShopping[i];
-        totalPrice += item.price * item.amount;
+        subtotal += item.price * item.amount;
 
         itemsRef.innerHTML += `
           <div class="basket_dish_item">
@@ -67,7 +70,7 @@ function renderBasket(){
     }
 
     const delivery = delivery_Fee
-    const total = Subtotal + delivery;
+    const total = subtotal + delivery;
 
     document.getElementById('Subtotal_price').textContent = formatToTheCurrency(subtotal);
     document.getElementById('Delivery_price').textContent = formatToTheCurrency(delivery);

@@ -43,16 +43,15 @@
     height: 710px;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 5px;
 }
 
 .baket_h2{
+    display: block;
     color: white;
-    position: relative;
-    top: 20px;
+    margin-bottom: 20px;
 }
 
 .basket_title{
@@ -86,6 +85,10 @@
     cursor: pointer;
 }
 
+.add_to_basket_img{
+    cursor: pointer;
+}
+
 .remove_pin{
     cursor: pointer;
     background-color: #FDEADC;
@@ -98,6 +101,7 @@
     border-radius: 20px;
     background-color: #FDEADC;
     width: 90%;
+    margin: 10px 0;
   
 }
 
@@ -113,7 +117,7 @@
 }
 
 .d_none{
-    display: none;
+    display: none !important;
 }
 
 .shop_cart_img{
@@ -123,4 +127,29 @@
 
 .basket_h3{
     color: white;
+}
+
+.order_button_con{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.buy_button{
+    background-color:#E76C1F;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+#basket_empty{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    align-items: center
 }
