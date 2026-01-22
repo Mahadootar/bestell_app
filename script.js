@@ -13,6 +13,13 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
     refContainer.innerHTML = "";
     
      for (let catIndex = 0; catIndex < dataArray.length; catIndex++) {
+        const categoryName = dataArray[catIndex].category;
+        const categoryImage = dataArray[catIndex].categoryImage;
+         refContainer.innerHTML += `
+         <div class="dishe-title">
+         <img src="${categoryImage}">
+         <h2>${categoryName}</h2>
+         </div>`
     for (let dishesIndex = 0; dishesIndex < dataArray[catIndex].dishes.length; dishesIndex++){
          refContainer.innerHTML += templateFunction(catIndex, dishesIndex);
     }
@@ -35,10 +42,13 @@ function renderBasket(){
         const item = cartShopping[i]
         basketContenRef.innerHTML += `
         <div id="item_container"> 
-        <div class="basket_dish_item">
-        <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
-        <div> <img class="remove_pin" src="./assets/icons/delete_order.png">
-        <span><h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4></span></div>
+          <div class="basket_dish_item">
+          <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
+          <div> <img class="remove_pin" src="./assets/icons/delete_order.png">
+          <span>
+           <h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4>
+           </span>
+            </div>
         </div>
         </div> `
         
