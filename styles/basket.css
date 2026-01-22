@@ -76,6 +76,7 @@
     height: 50px;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .row{

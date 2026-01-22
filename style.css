@@ -133,3 +133,19 @@
     flex: 1;
     gap: 5px;
 }
+
+@media(max-width: 1000px){
+    .basket-section{
+        display: none;
+    }
+
+    .basket_content{
+        display: none;
+    }
+    
+    .aot-image-hero{
+        width: 100%;
+    }
+
+
+}

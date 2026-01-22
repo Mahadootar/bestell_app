@@ -35,6 +35,19 @@
 
         </nav>
     </header>
+    <section id="overlay_sec" class="overlay_section">
+    <div id="order_is_taken" class="order_is_on_way">
+        <div class="order_container_x">
+        <button onclick=" closeOverlay()">X</button>
+        </div>
+        <div>
+            <img src="./assets/icons/order_is_coming.png" alt="">
+            <p>Order Confirmed</p>
+            <p>Your Food is on the way</p>
+        </div>
+
+    </div>
+    </section>
     <main>
         <section class="aot-container-section">
             <div class="aot-image-hero">
@@ -75,7 +88,7 @@
                      <hr>
                      <div id="row_total" class="row"><span>total</span><span id="total_price_order">0,00€</span>
                     </div>
-                    <button id="order_button" class="buy_button">Buy Now (0,00€)</button>
+                    <button id="order_button" class="buy_button" onclick="openOderOverlay()">Buy Now (0,00€)</button>
 
                 </div>
               </div>
