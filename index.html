@@ -62,11 +62,27 @@
     </section>
 
         <section class="basket-section"> 
-                <h2>Warenkorb</h2>
-            <div id="basket_dish" class="basket_content">
-                <h2 class="baket_h2">Deine Bestellung</h2>
                 
-        
+            <div id="basket_dish" class="basket_content">
+                <div id="basket_empty"></div>
+
+                <div id="basket_full" class="d_none" >
+                <h2 class="baket_h2">Your Order</h2>
+                <div id="basket_items"></div>
+
+                <div id="basket_order_summe">
+                    <div class="row"><span>subtotal</span><span id="Subtotal_price">0,00€</span></div>
+                     <div class="row"><span>delivery</span><span id="Delivery_price">4,99€</span></div>
+                     <hr>
+                     <div id="row_total"><span>total</span><span id="total_price_order">0,00€</span>
+                    </div>
+                         <button id="order_button" class="buy_button">Buy Now (0,00€)</button>
+
+                     
+
+        </div>
+        </div>
+        </div>
         </section>
     </main>
     <footer class="the_footer">

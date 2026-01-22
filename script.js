@@ -4,6 +4,8 @@ function init(){
   renderBasket();
 }
 
+const delivery_Fee = 4.99;
+
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
 }
@@ -27,32 +29,51 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
 }
 
 function renderBasket(){
-    const basketContenRef = document.getElementById('basket_dish');
-    basketContenRef.innerHTML = "";
+    const emptyRef = document.getElementById('basket_empty');
+    const fullRef = document.getElementById('basket_full');
+    const itemsRef = document.getElementById('basket_items');
+
+    emptyRef.innerHTML = "";
+    itemsRef.innerHTML = "";
 
     if (cartShopping.length === 0){
-        basketContenRef.innerHTML = `<div>
-           <img class="empty_baskett" src="./assets/icons/empty_basket.png">
-           <h3> Dein Warenkorb ist leer</h3></div>
+        fullRef.classList.add('d_none');
+
+        emptyRef.innerHTML = `<div class="empty_state">
+        <h3 class="basket_h3">Your Basket is empty</h3>
+        <h3 class="basket_h3">Order NOW!!!</h3>
+           <img class="shop_cart_img" src="./assets/icons/empty_basket.png">
+           </div>
     `;
     return;    
     }
-    
+    fullRef.classList.remove('d_none');
+
+    let totalPrice = 0;
+
     for (let i = 0; i < cartShopping.length; i++) {
-        const item = cartShopping[i]
-        basketContenRef.innerHTML += `
-        <div id="item_container"> 
+        const item = cartShopping[i];
+        totalPrice += item.price * item.amount;
+
+        itemsRef.innerHTML += `
           <div class="basket_dish_item">
           <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
-          <div> <img class="remove_pin" src="./assets/icons/delete_order.png">
-          <span>
+          <div class="item_name_price"> <img class="remove_pin" src="./assets/icons/delete_order.png">
+          <div>
            <h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4>
-           </span>
+           </div>
             </div>
-        </div>
-        </div> `
-        
+        </div>`; 
     }
+
+    const delivery = delivery_Fee
+    const total = Subtotal + delivery;
+
+    document.getElementById('Subtotal_price').textContent = formatToTheCurrency(subtotal);
+    document.getElementById('Delivery_price').textContent = formatToTheCurrency(delivery);
+    document.getElementById('total_price_order').textContent = formatToTheCurrency(total);
+    document.getElementById('order_button').textContent = `Buy Now ${formatToTheCurrency(total)}`;
+    
 
 }
 
@@ -84,3 +105,8 @@ function addToBasket(catIndex, dishesIndex){
     renderBasket();
 }
 
+function removeBasket(id){
+    cartShopping.splice(id, 1)
+    renderBasket();
+
+}

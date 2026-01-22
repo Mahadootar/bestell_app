@@ -46,6 +46,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 5px;
 }
 
 .baket_h2{
@@ -91,14 +92,35 @@
 }
 
 .basket_dish_item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
     background-color: #FDEADC;
+    width: 90%;
   
 }
 
 .item_name{
+    
     color: black;
 }
 
-#item_container{
+.item_name_price{
+    display: flex;
+    justify-content: space-between;
   
+}
+
+.d_none{
+    display: none;
+}
+
+.shop_cart_img{
+    height: 120px;
+    width: 120px;
+}
+
+.basket_h3{
+    color: white;
 }
