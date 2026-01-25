@@ -96,7 +96,7 @@
 }
 
 #basket_items{
-    overflow: scroll;
+    overflow: auto;
     height: 500px;
     overflow-x: hidden;
     scroll-behavior: smooth;
