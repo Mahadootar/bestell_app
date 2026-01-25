@@ -152,7 +152,7 @@
 }
  
 
-@media(max-width: 1050px){
+@media(max-width: 970px){
     .aot-container-section{
     width: 100%;
 }
@@ -162,8 +162,10 @@
     flex-direction: column;
    }
    .basket-section{
-    display: flex;
+    display: none!important;
    }
+
+ 
 
    nav{
     display: none;
@@ -171,8 +173,20 @@
    
 }
 
-@media(max-width: 900px){
-    .nav-item-aktiv{
+@media(max-width: 960px){
+    .Burger_haus_name {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    
+}
+
+.the_container_con_name {
+    margin-bottom: 0;}
+
+      .nav-item-aktiv{
     background-color: #363534;
     border: none;
     padding-block: 0px;
@@ -213,3 +227,128 @@
     
 }
 }
+
+
+@media(max-width: 900px){
+    .category-img {
+        margin-left: 0;
+
+    }
+
+    header{
+        margin-bottom: 20px;
+    }
+
+    .aot-container-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .aot-image-hero{
+        border-radius: 20px;
+
+    }
+  
+    .dishe-title {
+    background-color: #E76C1F;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin: 20px 0px;
+    justify-content: end;
+    flex-direction: column;
+}
+
+#dishes_container{
+    width: 100%;
+    
+}
+
+.the_footer{
+    width: 100%;
+    padding: 16px 64px;
+    background-color: #E76C1F;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30px;
+    align-items: baseline;
+}
+}
+
+@media(max-width: 700px){
+    #dishes_container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .dish_img{
+        padding: 0;
+    }
+
+    .food_photo {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.dish_bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+    flex-direction: row;
+
+}
+
+.dish_text{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0px;
+    margin-left: 5px;
+}
+
+.dishe_element{
+    display: flex;
+    flex-direction: column;
+
+    }
+}
+
+
+@media(max-width: 500px){
+.container_of_ptag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dishe-title{
+    margin-bottom: 30px;
+}
+}
+
+@media(max-width: 320px){
+    .dish_bottom{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+    
+    }
+}
+        
+
