@@ -23,7 +23,7 @@ function getDishesTemplate(catIndex, dishIndex){
 
 function getCategoryTemplateHeader(categoryName, categoryImage){
    return `<div class="dishe-title">
-         <img src="${categoryImage}">
+         <img class="category-img" src="${categoryImage}">
          <h2 class="category_name">${categoryName}</h2>
    </div>`;
 }

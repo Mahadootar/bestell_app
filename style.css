@@ -96,7 +96,6 @@
 
 #dishes_container{
     padding-top: 20px;
-    padding-left: 100px;
     width: 710px;
 }
 
@@ -107,6 +106,7 @@
     margin-top: 5px;
     margin-bottom: 10px;
     border-radius: 20px;
+    margin-left: 100px;
 }
 
 .dish_img{
@@ -134,12 +134,13 @@
     gap: 5px;
 }
 
-@media(max-width: 1000px){
-    .basket-section{
-        display: none;
+@media(max-width: 1050px){
+    .aot-container-section{
+        width: 100%;
+        
     }
 
-    .basket_content{
+    .basket-section {
         display: none;
     }
     
