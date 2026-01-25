@@ -45,7 +45,9 @@ header {
 main{
     display: flex;
     flex-direction: row;
-    height: 100%;
+    flex-grow: 1;
+    gap: 2px;
+    
 }
 
 .the_footer{
