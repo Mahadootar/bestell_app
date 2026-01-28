@@ -81,7 +81,7 @@ function addToBasket(catIndex, dishesIndex){
         });
     }
     renderBasket();
-    orderConfirm();
+    
 }
 
 function removeBasket(i){
@@ -91,11 +91,9 @@ function removeBasket(i){
 
 function openOderOverlay(){
     const overlayRef = document.getElementById('overlay_sec');
-    const basketFayAway = document.getElementsByClassName('basket-section')[0];
-    const aotContainer = document.getElementsByClassName('aot-image-hero')[0];
     
-    aotContainer.style.width = '1940px'
-    basketFayAway.style.display = 'none'
+    closeBasket();
+   
     cartShopping.length = 0;
     overlayRef.style.display = 'flex';
 
@@ -103,11 +101,18 @@ function openOderOverlay(){
 
 function closeOverlay(){
       const closeOverlayRef = document.getElementById('overlay_sec');
-      const aotContainer = document.getElementsByClassName('aot-image-hero')[0];
-      const basketFayAway = document.getElementsByClassName('basket-section')[0];
 
     closeOverlayRef.style.display ='none';
-    aotContainer.style.width = '100%'
-    basketFayAway.style.display = 'flex';
+
       renderBasket();
+}
+
+function openBasket(){
+    document.querySelector('.basket-section').classList.add('active');
+    const basket = document.querySelector('.basket-section');
+    console.log(basket);
+}
+
+function closeBasket(){
+    document.querySelector('.basket-section').classList.remove('active');
 }

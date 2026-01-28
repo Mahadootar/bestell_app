@@ -78,6 +78,9 @@
             <div id="basket_dish" class="basket_content">
              <div id="basket_empty"></div>
               <div id="basket_full" class="d_none" >
+                <div id="close_basket_mobile_container" class="close_basket_mobile_con">
+                <button class="close_basket_mobile" onclick="closeBasket()">X</button>
+                </div>
                 <h2 class="basket_h2">Your Order</h2>
                 <div id="basket_items"></div>
 
@@ -105,9 +108,8 @@
 
     </footer>
     <div class="nav_bottom" id="nav-bottom">
-        <button class="nav-item-aktiv">
+        <button class="nav-item-aktiv" onclick="location.href='./index.html'">
             <img class="nav-bottom_img" src="./assets/icons/Home.svg" alt="Home">
-            <span></span>
         </button>
          <button class="nav-item">
             <img src="./assets/icons/Profile.svg" alt="Profile">
@@ -117,7 +119,7 @@
             <img src="./assets/icons/orders.svg" alt="order_img">
             <span></span>
         </button>
-         <button class="nav-item">
+         <button class="nav-item" onclick="openBasket()">
             <img src="./assets/icons/basket.svg" alt="">
             <span></span>
         </button>

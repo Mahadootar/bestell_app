@@ -161,11 +161,8 @@
     display: flex;
     flex-direction: column;
    }
-   .basket-section{
-    display: none!important;
-   }
+   
 
- 
 
    nav{
     display: none;
@@ -173,20 +170,51 @@
    
 }
 
-@media(max-width: 960px){
-    .Burger_haus_name {
+@media(max-width: 969px){
+    .close_basket_mobile_con{
         display: flex;
-        align-items: center;
-        gap: 5px;
-        flex-direction: column-reverse;
-        margin-top: 20px;
-    
+        justify-content: end;
+        padding-top: 10px;
+    }
+
+    .close_basket_mobile{
+     border: none;
+    background-color: #363534;
+    color: #FDEADC;
+    font-size: larger;
+    }
+
+    .basket-section{
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: flex-end;
+        width: auto;
+        padding: 0;
+        height: 500px;
+    }
+
+    .basket-section.active{
+        display: flex;
+    }
+
+    #close_basket_mobile_container{
+        cursor: pointer;
+     display: flex !important;
 }
+    
+    .basket_content{
+        max-height: 480px;
+        height: auto;
+        width: 100%;
+        max-height: 480px;
+        border-radius: 20px 20px 0 0;
+    }
 
-.the_container_con_name {
-    margin-bottom: 0;}
-
-      .nav-item-aktiv{
+    .nav-item-aktiv{
     background-color: #363534;
     border: none;
     padding-block: 0px;
@@ -226,6 +254,23 @@
     color: #363534;
     
 }
+
+}
+
+@media(max-width: 960px){
+    .Burger_haus_name {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    
+}
+
+.the_container_con_name {
+    margin-bottom: 0;}
+
+    
 }
 
 
