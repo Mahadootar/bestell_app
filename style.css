@@ -187,7 +187,6 @@
     .basket-section{
         position: fixed;
         inset: 0;
-        background: rgba(0,0,0,0.6);
         z-index: 9999;
         display: none;
         justify-content: center;
@@ -199,7 +198,12 @@
 
     .basket-section.active{
         display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        top: 40px;
     }
+
+   
 
     #close_basket_mobile_container{
         cursor: pointer;
@@ -207,10 +211,6 @@
 }
     
     .basket_content{
-        max-height: 480px;
-        height: auto;
-        width: 100%;
-        max-height: 480px;
         border-radius: 20px 20px 0 0;
     }
 
@@ -253,6 +253,19 @@
     background-color: #363534;
     color: #363534;
     
+}
+
+.basket_content{
+    background-color: #363534;
+    width: 430px;
+    min-height: 760px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    position: sticky;
+    top: 0px;
 }
 
 }
@@ -367,6 +380,7 @@
 .dishe_element{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 
     }
 }

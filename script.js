@@ -108,11 +108,7 @@ function closeOverlay(){
 }
 
 function openBasket(){
-    document.querySelector('.basket-section').classList.add('active');
+    document.querySelector('.basket-section').classList.toggle('active');
     const basket = document.querySelector('.basket-section');
-    console.log(basket);
 }
 
-function closeBasket(){
-    document.querySelector('.basket-section').classList.remove('active');
-}

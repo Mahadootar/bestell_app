@@ -2,7 +2,7 @@ function getDishesTemplate(catIndex, dishIndex){
     const dish = allDishes[catIndex].dishes[dishIndex]
 
     return `
-    <div class="dishe_element">
+    <div class="dishe_element" onclick="openBasket()">
      <div class="dish_img">
         <img class="food_photo" src="./assets/img/Food_img/${dish.image}">
      </div>
