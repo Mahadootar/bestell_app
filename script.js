@@ -21,7 +21,7 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
     for (let dishesIndex = 0; dishesIndex < dataArray[catIndex].dishes.length; dishesIndex++){
          refContainer.innerHTML += templateFunction(catIndex, dishesIndex);
     }
-}
+  }
 }
 
 function renderBasket(){
@@ -90,21 +90,31 @@ function removeBasket(i){
 }
 
 function openOderOverlay(){
+    const aotContainer = document.getElementById ('aot-img-hero-container');
+    const basketFadeAway = document.getElementById('basketHide');
     const overlayRef = document.getElementById('overlay_sec');
     
-    closeBasket();
-   
+    if (!aotContainer || !basketFadeAway || !overlayRef ) {
+        console.error('One or more elements not found', {
+            aotContainer,
+            basketFadeAway,
+            overlayRef,
+        });
+        return;
+    }
+
+    aotContainer.style.width = '100vw';
+    basketFadeAway.style.display = 'none'
     cartShopping.length = 0;
     overlayRef.style.display = 'flex';
-
 }
 
 function closeOverlay(){
       const closeOverlayRef = document.getElementById('overlay_sec');
 
     closeOverlayRef.style.display ='none';
-
-      renderBasket();
+    openBasket();
+    renderBasket();
 }
 
 function openBasket(){

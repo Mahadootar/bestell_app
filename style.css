@@ -1,142 +1,4 @@
-.aot-container-section{
-    width: calc(100% - 430px);
-}
-
-.aot-image-hero{
-    background-image: url(./assets/img/hero/Rectangle_11.png);
-    background-size: cover;
-    width: 100%;
-    height: 510px;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.aot-ellipse{
-    width: 200px;
-    height: 200px;
-
-}
-
-.aot-ellipse-container{
-    display: flex;
-    position: relative;
-    top: 90px;
-}
-
-.restaurant-description{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: 100px;
-    left: 140px;
-}
-
-.the_container_con_name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.evaluation_logo{
-    object-fit: cover;
-    width: 100px;
-    height: 24px;
-    display: flex;
-    border-radius: 10px;
-
-}
-
-.Burger_haus_name{
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-
-.name_of-the_haus{
-   margin-top: 80px;
-   margin-bottom: 20px;
-   
-}
-
-.dishe-title{
-    background-color: #E76C1F;
-    height: 70px;
-    width: 1400px;
-    display: flex;
-    align-items: center;
-    gap: 250px;
-    margin: 20px 0px;
-
-}
-
-.dishes_title_img{
-    width: 88px;
-    height: 90px;
-}
-
-.category_name{
-    color: white;
-}
-
-.food_photo{
-    height: 120px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    
-}
-
-#dishes_container{
-    padding-top: 20px;
-    width: 710px;
-}
-
-.dishe_element{
-    display: flex;
-    gap: 30px;
-    background-color: #FDEADC;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    margin-left: 100px;
-}
-
-.dish_img{
-    padding:5px
-}
-
-.dish_bottom{
-    display: flex;
-    flex: 1;
-    align-items: end;
-    justify-content: end;
-    flex-direction: column;
-    gap: 30px;
-
-}
-
-.price_class{
-    padding-right: 30px;
-}
-
-.dish_text{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 5px;
-}
-
 /* hier beginnt die media@uerry*/
-
-
 @media(max-width: 1150px){
     .dishe_element{
         display: flex;
@@ -147,27 +9,22 @@
         border-radius: 20px;
         margin-left: 20px;
         width: 70%;
-
-  }
+    }
 }
  
-
 @media(max-width: 970px){
     .aot-container-section{
     width: 100%;
-}
+    }
    main{
     width: 100%;
     display: flex;
     flex-direction: column;
    }
    
-
-
    nav{
     display: none;
    }
-   
 }
 
 @media(max-width: 969px){
@@ -203,12 +60,10 @@
         top: 40px;
     }
 
-   
-
     #close_basket_mobile_container{
         cursor: pointer;
      display: flex !important;
-}
+   }
     
     .basket_content{
         border-radius: 20px 20px 0 0;
@@ -222,7 +77,7 @@
      cursor: pointer;
     opacity: 1;
     transition: 0.2s;
-}
+   }
 
 .nav-item{
     background-color: #363534;
@@ -232,8 +87,7 @@
     cursor: pointer;
     opacity: 0.9;
     transition: 0.2s;
-}
-
+   }
 
 #nav-bottom{
     background-color: #363534;
@@ -247,13 +101,12 @@
     align-items: center;
     z-index: 9999;
     border-top: solid rgba(255,255,255,0.1);;
-}
+  }
 
 .nav-bottom_img{
     background-color: #363534;
     color: #363534;
-    
-}
+  }
 
 .basket_content{
     background-color: #363534;
@@ -266,7 +119,7 @@
     gap: 5px;
     position: sticky;
     top: 0px;
-}
+  }
 
 }
 
@@ -278,14 +131,12 @@
         flex-direction: column-reverse;
         margin-top: 20px;
     
-}
+    }
 
 .the_container_con_name {
-    margin-bottom: 0;}
-
-    
+    margin-bottom: 0;
+    } 
 }
-
 
 @media(max-width: 900px){
     .category-img {
@@ -320,12 +171,11 @@
     margin: 20px 0px;
     justify-content: end;
     flex-direction: column;
-}
+   }
 
 #dishes_container{
     width: 100%;
-    
-}
+   }
 
 .the_footer{
     width: 100%;
@@ -337,7 +187,7 @@
     align-items: flex-end;
     margin-top: 30px;
     align-items: baseline;
-}
+   }
 }
 
 @media(max-width: 700px){
@@ -358,7 +208,7 @@
     object-fit: cover;
     border-radius: 12px;
     padding: 5px;
-}
+   }
 
 .dish_bottom{
     display: flex;
@@ -367,7 +217,7 @@
     gap: 0px;
     flex-direction: row;
 
-}
+  }
 
 .dish_text{
     display: flex;
@@ -375,16 +225,14 @@
     flex: 1;
     gap: 0px;
     margin-left: 5px;
-}
+  }
 
 .dishe_element{
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
     }
 }
-
 
 @media(max-width: 500px){
 .container_of_ptag{
@@ -392,11 +240,55 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+   }
+
+.basket_content{
+    background-color: #363534;
+    width: 340px;
+    min-height: 760px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    position: sticky;
+    top: 0px;
+   }
+
+#basket_full{
+    width: 250px;
+  }
 
 .dishe-title{
     margin-bottom: 30px;
+   }
 }
+
+@media(max-width: 400px){
+    .basket_content{
+    background-color: #363534;
+    width: 280px;
+    min-height: 760px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    position: sticky;
+    top: 0px;
+    }
+
+#basket_full{
+    width: 230px;
+   }
+
+.overlay_section{
+    padding-right: 24px;
+   }
+
+#order_is_taken{
+    width: 290px;
+   }
 }
 
 @media(max-width: 320px){

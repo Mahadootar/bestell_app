@@ -91,6 +91,142 @@ nav .bar{
    background-color: white;
 }
 
+.aot-container-section{
+    width: calc(100% - 430px);
+}
+
+.aot-image-hero{
+    background-image: url(./assets/img/hero/Rectangle_11.png);
+    background-size: cover;
+    width: 100%;
+    height: 510px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.aot-ellipse{
+    width: 200px;
+    height: 200px;
+
+}
+
+.aot-ellipse-container{
+    display: flex;
+    position: relative;
+    top: 90px;
+}
+
+.restaurant-description{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    left: 140px;
+}
+
+.the_container_con_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.evaluation_logo{
+    object-fit: cover;
+    width: 100px;
+    height: 24px;
+    display: flex;
+    border-radius: 10px;
+
+}
+
+.Burger_haus_name{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.name_of-the_haus{
+   margin-top: 80px;
+   margin-bottom: 20px;
+   
+}
+
+.dishe-title{
+    background-color: #E76C1F;
+    height: 70px;
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    gap: 250px;
+    margin: 20px 0px;
+
+}
+
+.dishes_title_img{
+    width: 88px;
+    height: 90px;
+}
+
+.category_name{
+    color: white;
+}
+
+.food_photo{
+    height: 120px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    
+}
+
+#dishes_container{
+    padding-top: 20px;
+    width: 710px;
+}
+
+.dishe_element{
+    display: flex;
+    gap: 30px;
+    background-color: #FDEADC;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-left: 100px;
+}
+
+.dish_img{
+    padding:5px
+}
+
+.dish_bottom{
+    display: flex;
+    flex: 1;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.price_class{
+    padding-right: 30px;
+}
+
+.dish_text{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
 #order_is_taken{
     position: fixed;
     background-color: #363534;
