@@ -92,7 +92,7 @@ let allDishes = [
 }   
 ]
 
-const cartShopping = [
+let cartShopping = [
     
 ]
 

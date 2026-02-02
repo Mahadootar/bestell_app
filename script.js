@@ -1,14 +1,15 @@
-function init(){
- renderAll();
+function init(){  /* this function initialate the page */
+  getFromLocalStorage();
+  renderAll();
   renderBasket();
 }
 
 const delivery_Fee = 4.99;
-
+/* in this function the the dishes are rendert in to the page */
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
 }
-
+/* in this function the dishes are separeted in to three categories */ 
 function  renderDishesSection(containerId, dataArray, templateFunction){
     let refContainer = document.getElementById(containerId);
     refContainer.innerHTML = "";
@@ -23,7 +24,7 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
     }
   }
 }
-
+/* this function tranfers from the renderDishesSection the dishes in the basket */
 function renderBasket(){
     const emptyRef = document.getElementById('basket_empty');
     const fullRef = document.getElementById('basket_full');
@@ -57,7 +58,7 @@ function renderBasket(){
     document.getElementById('order_button').textContent = `Buy Now ${formatToTheCurrency(total)}`;
 
 }
-
+/* this function formates the numbers in to currency */
 function formatToTheCurrency(value){
     return value.toFixed(2).replace('.',',') + '€';
 }
@@ -80,15 +81,17 @@ function addToBasket(catIndex, dishesIndex){
 
         });
     }
+    saveBasketToLocalStorage();
     renderBasket();
     
 }
-
+/* by this function it is posible to remove a dishes from basket */
 function removeBasket(i){
-    cartShopping.splice(i, 1)
+    cartShopping.splice(i, 1);
+    saveBasketToLocalStorage();
     renderBasket();
 }
-
+/* this function make possible that after ordering the basket fade away and the overlay is visble*/
 function openOderOverlay(){
     const aotContainer = document.getElementById ('aot-img-hero-container');
     const basketFadeAway = document.getElementById('basketHide');
@@ -106,19 +109,37 @@ function openOderOverlay(){
     aotContainer.style.width = '100vw';
     basketFadeAway.style.display = 'none'
     cartShopping.length = 0;
+    localStorage.removeItem('cartShopping');
     overlayRef.style.display = 'flex';
 }
-
+/* this function close the overlay */
 function closeOverlay(){
       const closeOverlayRef = document.getElementById('overlay_sec');
+      const basket = document.getElementById('basketHide');
+      const aotContainer = document.getElementById ('aot-img-hero-container');
 
     closeOverlayRef.style.display ='none';
+    basket.style.display = '';
+    aotContainer.style.width = '100%';
     openBasket();
     renderBasket();
 }
-
+/* in the mediaquerry section this function enables us to open and close the basket*/
 function openBasket(){
     document.querySelector('.basket-section').classList.toggle('active');
     const basket = document.querySelector('.basket-section');
 }
+/* this function saves the basket in the local storage */
+function saveBasketToLocalStorage(){
+    localStorage.setItem("cartShopping", JSON.stringify(cartShopping));
+}
+/* this function gets the basket from the local storage */
+function getFromLocalStorage(){
+    let cartShoppingArray = JSON.parse(localStorage.getItem('cartShopping'));
 
+    if (cartShoppingArray !== null) {
+
+        cartShopping = cartShoppingArray;
+    }
+    
+}

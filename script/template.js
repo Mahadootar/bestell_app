@@ -3,7 +3,7 @@ function getDishesTemplate(catIndex, dishIndex){
 
     return `
     <div class="dishe_element" onclick="openBasket()">
-     <div class="dish_img">
+     <div class="dish_img" tabindex="0">
         <img class="food_photo" src="./assets/img/Food_img/${dish.image}">
      </div>
      <div class="dish_text">
@@ -39,10 +39,10 @@ function getEmptyBasketTemplate(){
 
 
 function getBasketItemTemplate(item, i){
-return `<div class="basket_dish_item">
+return `<div class="basket_dish_item" tabindex="0">
    <div><h4 class="item_name">${item.amount}x${item.name}</h4></div>
       <div class="item_name_price">
-      <img class="remove_pin" onclick="removeBasket(${i})" src="./assets/icons/delete_order.png">
+      <img class="remove_pin" onclick="removeBasket(${i})" src="./assets/icons/delete_order.png" tabindex="0">
       <div>
        <h4 class="item_name">${formatToTheCurrency(item.price * item.amount)}</h4>
       </div>
