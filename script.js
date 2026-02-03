@@ -5,6 +5,7 @@ function init(){  /* this function initialate the page */
 }
 
 const delivery_Fee = 4.99;
+
 /* in this function the the dishes are rendert in to the page */
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
@@ -33,7 +34,7 @@ function renderBasket(){
     calculatethePrice(subtotal);
 
 }
-/* this function tranfers from the renderDishesSection the dishes in the basket */
+/* this function shows the empty basket */
 function emptyBasket(){
      const emptyRef = document.getElementById('basket_empty');
     const fullRef = document.getElementById('basket_full');
@@ -50,6 +51,7 @@ function emptyBasket(){
     return false;
 }
 
+/* by this function from the category of dishes we are able to transfer the item to the basket*/
 function renderTheBasketDishes(){
     const itemsRef = document.getElementById('basket_items');
     itemsRef.innerHTML = "";
@@ -63,6 +65,7 @@ function renderTheBasketDishes(){
     return subtotal;
 }
 
+/* this function calculates the prices of the dishes*/
 function calculatethePrice(subtotal){
     const delivery = delivery_Fee
     const total = subtotal + delivery;
@@ -82,11 +85,8 @@ function formatToTheCurrency(value){
 
 function addToBasket(catIndex, dishesIndex){
     const dish = allDishes[catIndex].dishes[dishesIndex];
-   
     const existingIndex = cartShopping.findIndex(
-        item => item.id === dish.id
-    );
-
+        item => item.id === dish.id);
     if (existingIndex !== -1) {
         cartShopping[existingIndex].amount += 1;
     }else{
@@ -95,20 +95,19 @@ function addToBasket(catIndex, dishesIndex){
             name: dish.name,
             price: dish.price,
             amount: 1,
-
         });
     }
     saveBasketToLocalStorage();
-    renderBasket();
-    
+    renderBasket();  
 }
-/* by this function it is posible to remove a dishes from basket */
+/* by this function it is posible to remove/delete a dishes from basket */
 function removeBasket(i){
     cartShopping.splice(i, 1);
     saveBasketToLocalStorage();
     renderBasket();
 }
 
+/* this enables us to increase or helps us to add one more dish/item to our menu*/
 function inscreaAmount(i){
     cartShopping[i].amount += 1;
     saveBasketToLocalStorage();
@@ -116,6 +115,7 @@ function inscreaAmount(i){
     
 }
 
+/* this enables us to decrease or helps us to delete one by one dish/item from our menu*/
 function descreaAmount(i){
     cartShopping[i].amount -= 1;
     if (cartShopping[i].amount === 0) {
@@ -127,25 +127,27 @@ function descreaAmount(i){
 }
 
 /* this function make possible that after ordering the basket fade away and the overlay is visble*/
-function openOderOverlay(){
-    const aotContainer = document.getElementById ('aot-img-hero-container');
-    const basketFadeAway = document.getElementById('basketHide');
-    const overlayRef = document.getElementById('overlay_sec');
-    
-    if (!aotContainer || !basketFadeAway || !overlayRef ) {
-        console.error('One or more elements not found', {
-            aotContainer,
-            basketFadeAway,
-            overlayRef,
-        });
-        return;
-    }
+function showOrderOverlay(){
+     const aotContainer = document.getElementById ('aot-img-hero-container');
+     const basketFadeAway = document.getElementById('basketHide');
+     const overlayRef = document.getElementById('overlay_sec');
 
-    aotContainer.style.width = '100vw';
-    basketFadeAway.style.display = 'none'
+    if (!aotContainer || !basketFadeAway || !overlayRef );
+     aotContainer.style.width = '100%';
+    basketFadeAway.style.display = 'none';
+    overlayRef.style.display = 'flex';
+}
+
+/* this function open the overlay and restarts the basket after ordering */
+function openOderOverlay(){
+    showOrderOverlay();
+    restartTheBasket();
+    renderBasket();
+}
+/* this function restarts/empties the basket after ordering */
+function restartTheBasket(){
     cartShopping.length = 0;
     localStorage.removeItem('cartShopping');
-    overlayRef.style.display = 'flex';
 }
 /* this function close the overlay */
 function closeOverlay(){
@@ -179,6 +181,7 @@ function getFromLocalStorage(){
     
 }
 
+/* this function stops the bubble that is created when the add button is click to close the basket*/
 function stobBubble(event){
     event.stopPropagation();
 }
