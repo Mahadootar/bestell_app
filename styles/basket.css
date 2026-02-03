@@ -113,3 +113,20 @@
 #close_basket_mobile_container{
      display:none ;
 }
+
+.removing_item{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.taken_item{
+    font-size: x-large;
+    cursor: pointer;
+
+}
+
+.adding_item{
+    font-size: x-large;
+    cursor: pointer;
+}

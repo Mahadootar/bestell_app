@@ -9,6 +9,7 @@ const delivery_Fee = 4.99;
 function renderAll(){
     renderDishesSection('dishes_container', allDishes, getDishesTemplate);
 }
+
 /* in this function the dishes are separeted in to three categories */ 
 function  renderDishesSection(containerId, dataArray, templateFunction){
     let refContainer = document.getElementById(containerId);
@@ -24,31 +25,45 @@ function  renderDishesSection(containerId, dataArray, templateFunction){
     }
   }
 }
-/* this function tranfers from the renderDishesSection the dishes in the basket */
-function renderBasket(){
-    const emptyRef = document.getElementById('basket_empty');
-    const fullRef = document.getElementById('basket_full');
-    const itemsRef = document.getElementById('basket_items');
 
+function renderBasket(){
+    if(emptyBasket()) return;
+
+    const subtotal = renderTheBasketDishes();
+    calculatethePrice(subtotal);
+
+}
+/* this function tranfers from the renderDishesSection the dishes in the basket */
+function emptyBasket(){
+     const emptyRef = document.getElementById('basket_empty');
+    const fullRef = document.getElementById('basket_full');
     emptyRef.innerHTML = "";
-    itemsRef.innerHTML = "";
 
     if (cartShopping.length === 0){
     emptyRef.classList.remove('d_none');
     fullRef.classList.add('d_none');
-    emptyRef.innerHTML = getEmptyBasketTemplate() 
-    return;    
+    emptyRef.innerHTML = getTheEmptyBasketTemplate();
+    return true;    
     }
     emptyRef.classList.add('d_none');
     fullRef.classList.remove('d_none');
+    return false;
+}
 
+function renderTheBasketDishes(){
+    const itemsRef = document.getElementById('basket_items');
+    itemsRef.innerHTML = "";
+    
     let subtotal = 0;
     for (let i = 0; i < cartShopping.length; i++) {
         const item = cartShopping[i];
         subtotal += item.price * item.amount;
         itemsRef.innerHTML += getBasketItemTemplate(item, i);
     }
+    return subtotal;
+}
 
+function calculatethePrice(subtotal){
     const delivery = delivery_Fee
     const total = subtotal + delivery;
 
@@ -56,8 +71,10 @@ function renderBasket(){
     document.getElementById('Delivery_price').textContent = formatToTheCurrency(delivery);
     document.getElementById('total_price_order').textContent = formatToTheCurrency(total);
     document.getElementById('order_button').textContent = `Buy Now ${formatToTheCurrency(total)}`;
-
+    
+    
 }
+
 /* this function formates the numbers in to currency */
 function formatToTheCurrency(value){
     return value.toFixed(2).replace('.',',') + '€';
@@ -77,7 +94,7 @@ function addToBasket(catIndex, dishesIndex){
             id: dish.id,
             name: dish.name,
             price: dish.price,
-            amount: 1
+            amount: 1,
 
         });
     }
@@ -91,6 +108,24 @@ function removeBasket(i){
     saveBasketToLocalStorage();
     renderBasket();
 }
+
+function inscreaAmount(i){
+    cartShopping[i].amount += 1;
+    saveBasketToLocalStorage();
+    renderBasket();
+    
+}
+
+function descreaAmount(i){
+    cartShopping[i].amount -= 1;
+    if (cartShopping[i].amount === 0) {
+    cartShopping.splice(i, 1)
+        
+    }
+    saveBasketToLocalStorage();
+    renderBasket();
+}
+
 /* this function make possible that after ordering the basket fade away and the overlay is visble*/
 function openOderOverlay(){
     const aotContainer = document.getElementById ('aot-img-hero-container');
@@ -142,4 +177,8 @@ function getFromLocalStorage(){
         cartShopping = cartShoppingArray;
     }
     
+}
+
+function stobBubble(event){
+    event.stopPropagation();
 }
