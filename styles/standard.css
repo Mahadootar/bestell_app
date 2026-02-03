@@ -12,7 +12,7 @@
 
 body{
    width: 100%;
-   overflow-x: hidden;
+   overflow-x: unset;
    overflow-y: scroll;
 }
 
@@ -93,9 +93,12 @@ nav .bar{
 }
 
 .aot-container-section{
-    width: calc(100% - 430px);
+    width: 100%;
 }
-
+.dishes_section{
+    width: calc(100 - 430px);
+    display: flex;
+}
 .aot-ellipse{
     width: 200px;
     height: 200px;
