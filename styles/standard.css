@@ -37,7 +37,7 @@ h2{
 }
 
 header {
-    width: 100%;
+    width: 1940px;
     height: 130px;
    background-color:#E76C1F ;
    cursor: pointer;
@@ -155,7 +155,7 @@ nav .bar{
 .dishe-title{
     background-color: #E76C1F;
     height: 70px;
-    width: 1400px;
+    width: 1440px;
     display: flex;
     align-items: center;
     gap: 250px;
