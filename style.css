@@ -11,10 +11,6 @@
     align-items: end;
 }
 /* hier beginnt die media@uerry*/
-@media(max-width: 1600px){
-header {
-    width: 100%;
-    }
 @media(max-width: 1300px){
     .dishe-title{
         width: 1240px;
@@ -236,10 +232,6 @@ header {
 
     }
 
-    header{
-        margin-bottom: 20px;
-    }
-
     .aot-container-section {
         width: 100%;
         display: flex;
@@ -398,5 +390,4 @@ header {
         flex-direction: column;
     
     }
-}
 }

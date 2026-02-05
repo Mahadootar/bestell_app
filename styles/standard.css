@@ -10,45 +10,18 @@
     
 }
 
-body{
-   width: 100%;
-   overflow-x: unset;
-   overflow-y: scroll;
-}
-
-h1{
-    font-family: palanquin;
-    font-size: xxx-large;
-}
-
-.logo_name .haus{
-    color: #E76C1F;
-}
-
-h2{
-    font-family: palanquin;
-    font-size: xx-large;
-    color: black;
-
-}
-
-.ptag_haus{
-    font-size: larger;
-}
-
-header {
-    width: 1940px;
-    height: 130px;
-   background-color:#E76C1F ;
-   cursor: pointer;
-}
-
-main{
+.hero-section{
     display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    gap: 2px;
-    
+    justify-content: space-between;
+    margin: 0, auto;
+    padding: 32px 24px;
+    max-width: 1440px;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
 }
 
 .the_footer{
@@ -74,27 +47,50 @@ main{
     font-weight: bold;
 }
 
-nav{
-    width: 25px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 40px;
-    right: 25px;
-}
-
-nav .bar{
-   display: block;
-   width: 100%;
-   height: 3px;
-   background-color: white;
-}
 
 .aot-container-section{
     width: 100%;
 }
+
+
+header {
+   background-color:#E76C1F ;
+   height: 130px;
+}
+
+
+
+
+
+h1{
+    font-family: palanquin;
+    font-size: xxx-large;
+}
+
+.logo_name .haus{
+    color: #E76C1F;
+}
+
+h2{
+    font-family: palanquin;
+    font-size: xx-large;
+    color: black;
+
+}
+
+.ptag_haus{
+    font-size: larger;
+}
+
+
+ main{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 2px;
+    
+} 
+
 .dishes_section{
     width: 100%;
     display: flex;
@@ -144,6 +140,7 @@ nav .bar{
     display: flex;
     align-items: baseline;
     gap: 10px;
+    justify-content: center;
 }
 
 .name_of-the_haus{
