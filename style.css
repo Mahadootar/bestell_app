@@ -12,32 +12,6 @@
 }
 /* hier beginnt die media@uerry*/
 @media(max-width: 1300px){
-    .dishe-title{
-        width: 1240px;
-    }
-}
-
-@media(max-width: 1260px){
-    .dishe-title{
-        width: 1170px;
-    }
-}
-
-@media(max-width: 1190px){
-    .dishe-title{
-        width: 1090px;
-    }
-
-    .basket_content{
-        width: 410px;
-    }
-}
-
-@media(max-width: 1190px){
-    .dishe-title{
-        width: 1050px;
-    }
-
     .basket_content{
         width: 380px;
     }

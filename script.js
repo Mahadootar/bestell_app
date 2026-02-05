@@ -9,30 +9,25 @@ const delivery_Fee = 4.99;
 
 /* in this function the the dishes are rendert in to the page */
 function renderAll() {
-  renderDishesSection("dishes_container", allDishes, getDishesTemplate);
+  renderDishesCategory("burger_category", "Burger & Sandwich");
+  renderDishesCategory("pizza_category", "Pizza");
+  renderDishesCategory("salat_category", "Salad", );
 }
 
 /* in this function the dishes are separeted in to three categories */
-function renderDishesSection(containerId, dataArray, templateFunction) {
+function renderDishesCategory(containerId, categorName) {
   let refContainer = document.getElementById(containerId);
   refContainer.innerHTML = "";
 
-  for (let catIndex = 0; catIndex < dataArray.length; catIndex++) {
-    const categoryName = dataArray[catIndex].category;
-    const categoryImage = dataArray[catIndex].categoryImage;
-    refContainer.innerHTML += getCategoryTemplateHeader(
-      categoryName,
-      categoryImage,
-    );
+  const catIndex = allDishes.findIndex( categoryDishes => categoryDishes.category === categorName);
+  if (catIndex === -1) return;
+  categoryObj = allDishes[catIndex];
 
-    for (
-      let dishesIndex = 0;
-      dishesIndex < dataArray[catIndex].dishes.length;
-      dishesIndex++
-    ) {
-      refContainer.innerHTML += templateFunction(catIndex, dishesIndex);
-    }
+  for (let dishIndex = 0; dishIndex < categoryObj.dishes.length; dishIndex++) {
+    const dish = categoryObj.dishes[dishIndex];
+     refContainer.innerHTML += getDishesTemplate(dish, catIndex, dishIndex);
   }
+  
 }
 
 function renderBasket() {

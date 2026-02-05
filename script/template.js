@@ -1,6 +1,4 @@
-function getDishesTemplate(catIndex, dishIndex){
-    const dish = allDishes[catIndex].dishes[dishIndex];
-
+function getDishesTemplate(dish, catIndex, dishIndex){
     return `
     <div class="dishe_element" onclick="openBasket()">
      <div class="dish_img" tabindex="0">
@@ -19,13 +17,6 @@ function getDishesTemplate(catIndex, dishIndex){
      </div>
     </div>
     `;
-}
-
-function getCategoryTemplateHeader(categoryName, categoryImage){
-   return `<div class="dishe-title">
-         <img class="category-img" src="${categoryImage}">
-         <h2 class="category_name">${categoryName}</h2>
-   </div>`;
 }
 
 function getTheEmptyBasketTemplate(){
