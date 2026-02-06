@@ -10,51 +10,17 @@
     justify-content: center;
     align-items: end;
 }
+
 /* hier beginnt die media@uerry*/
-@media(max-width: 1300px){
-    .basket_content{
-        width: 380px;
-    }
-}
 
-@media(max-width: 1150px){
-    .dishe-title{
-        width: 1010px;
-    }
-
-    .basket_content{
-        width: 340px;
-    }
-
-}
-
-@media(max-width: 1075px){
-    .dishe-title{
-        width: 950px;
-    }
-
-    .basket_content{
-        width: 300px;
-    }
-
-    #basket_full{
-        width: 270px;
-    }
-
-    .basket-section{
-        padding: 0px;
-    }
+@media(max-width: 1255px){
+   .dishe_element{
+    width: 610px;
+   }
 
 }
 
 @media(max-width: 1025px){
-    .dishe-title{
-        width: 870px;
-    }
-
-    .basket_content{
-        width: 240px;
-    }
 
     #basket_full{
         width: 220px;
@@ -75,13 +41,10 @@
 }
  
 @media(max-width: 970px){
-    .aot-container-section{
-    width: 100%;
-    }
    main{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
    }
    
    nav{
@@ -89,7 +52,7 @@
    }
 }
 
-@media(max-width: 969px){
+@media(max-width: 800px){
     .close_basket_mobile_con{
         display: flex;
         justify-content: end;
@@ -109,7 +72,7 @@
         z-index: 9999;
         display: none;
         justify-content: center;
-        align-items: flex-end;
+        align-items: baseline;
         width: auto;
         padding: 0;
         height: 500px;
@@ -119,7 +82,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        top: 40px;
+        height: auto;
     }
 
     #close_basket_mobile_container{
@@ -127,9 +90,6 @@
      display: flex !important;
    }
     
-    .basket_content{
-        border-radius: 20px 20px 0 0;
-    }
 
     .nav-item-aktiv{
     background-color: #363534;
@@ -172,7 +132,7 @@
 
 .basket_content{
     background-color: #363534;
-    width: 430px;
+    width:430px;
     min-height: 640px;
     border-radius: 20px;
     display: flex;
@@ -181,6 +141,7 @@
     gap: 5px;
     position: sticky;
     top: 0px;
+    border-radius: 20px 20px 0 0;
   }
 
 }
@@ -204,14 +165,6 @@
     .category-img {
         margin-left: 0;
 
-    }
-
-    .aot-container-section {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
 
     .aot-image-hero{
@@ -259,6 +212,15 @@
     .dish_img{
         padding: 0;
     }
+
+    .hero-section{
+        display: flex;
+        justify-content: center;
+    }
+   
+   header{
+    margin-bottom: 20px;
+   }
 
     .food_photo {
     height: 100px;
@@ -323,18 +285,6 @@
 }
 
 @media(max-width: 400px){
-    .basket_content{
-    background-color: #363534;
-    width: 280px;
-    min-height: 760px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-    position: sticky;
-    top: 0px;
-    }
 
     .footer_content{
         display: flex;
@@ -364,4 +314,5 @@
         flex-direction: column;
     
     }
-}
+} 
+

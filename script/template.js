@@ -1,6 +1,6 @@
 function getDishesTemplate(dish, catIndex, dishIndex){
     return `
-    <div class="dishe_element" onclick="openBasket()">
+    <div class="dishe_element">
      <div class="dish_img" tabindex="0">
         <img class="food_photo" src="./assets/img/Food_img/${dish.image}">
      </div>
@@ -10,7 +10,7 @@ function getDishesTemplate(dish, catIndex, dishIndex){
      <div class="dish_bottom">
         <p class="price_class">${formatToTheCurrency(Number(dish.price))}</p>
      <div>
-        <button class="add_to_basket_btn" onclick="stobBubble(event); addToBasket(${catIndex}, ${dishIndex})">
+        <button class="add_to_basket_btn" onclick="stopBubble(event); addToBasket(${catIndex}, ${dishIndex}, addToTheShopingList())">
         <img class="add_to_basket_img" src="./assets/icons/button_add.png"></button>
      </div>
      </div>

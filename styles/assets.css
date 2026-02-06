@@ -28,3 +28,31 @@
     background-color: #FDEADC;
 }
 
+.notifaction{
+    position: absolute;
+    top: 2px;
+    right: 6px;
+
+    background-color: red;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    min-width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shopCount{
+    display: none;
+}
+ a{
+    color: white;
+    text-decoration: none;
+
+ }

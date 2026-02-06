@@ -3,15 +3,14 @@
     height: auto;
     padding: 5px;
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     flex-direction: column;
-    flex-grow: 1;
     
 }
 
 .basket_content{
     background-color: #363534;
-    width: 430px;
+    width: 100%;
     min-height: 800px;
     border-radius:20px;
     display: flex;

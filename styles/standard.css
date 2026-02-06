@@ -10,6 +10,17 @@
     
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
 .hero-section{
     display: flex;
     justify-content: space-between;
@@ -17,11 +28,6 @@
     padding: 32px 24px;
     max-width: 1440px;
 
-}
-
-body{
-    display: flex;
-    flex-direction: column;
 }
 
 .the_footer{
@@ -47,22 +53,16 @@ body{
     font-weight: bold;
 }
 
-
 .aot-container-section{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-
 header {
    background-color:#E76C1F ;
    height: 130px;
 }
-
-
-
-
 
 h1{
     font-family: palanquin;
@@ -83,7 +83,6 @@ h2{
 .ptag_haus{
     font-size: larger;
 }
-
 
 .dishes_section{
     display: flex;
@@ -168,11 +167,6 @@ h2{
     border-radius: 12px;
     
 }
-
-.firstSection{
-    width: 100vw;
-}
-
 
 .dishe_element{
     display: flex;

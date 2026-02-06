@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./assets/img/aot-ellipse/Ellipse.16.png" type="image/x-icon">
+    <link rel="stylesheet" href="">
     
 </head>
 <body onload="init()">
@@ -33,7 +34,7 @@
         </nav>
         </div>
    </header>
-   <div id="aot-img-hero-container" class="aot-image-hero">
+    <div id="aot-img-hero-container" class="aot-image-hero">
             <div class="aot-ellipse-container">
                 <img class="aot-ellipse" src="./assets/img/aot-ellipse/Ellipse.16.png" alt="Logo">
             </div>
@@ -52,7 +53,6 @@
             </div>
             </div>
             <main>
-                <div class="dishes_section">
                 <section class="firstSection">
                     <div class="dishe-title">
                        <img src="./assets/img/Food_img/Chanese_1.png" alt="">
@@ -73,9 +73,7 @@
                     <div id="salat_category">
                     </div>
                 </section>
-                
-            <section id="basketHide" class="basket-section"> 
-        
+                <section id="basketHide" class="basket-section"> 
             <div id="basket_dish" class="basket_content">
              <div id="basket_empty"></div>
               <div id="basket_full" class="d_none" >
@@ -97,15 +95,12 @@
               </div>
             </div>
         </section>
-            </div>
-   
-
             </main>
             <footer class="the_footer">
         <div>
             <div class="footer_content">
                 <p class="ptag_footer">© 2026 BurgerHause</p>
-                <p class="ptag_footer">Imprint</p>
+                <p class="ptag_footer"><a href="./datenschutz.html">Datenschutz</a></p>
                 <p class="ptag_footer">Cookies Prefrence</p>
             </div>
         </div>
@@ -137,7 +132,7 @@
         </button>
          <button class="nav-item" onclick="openBasket()">
             <img src="./assets/icons/basket.svg" alt="">
-            <span></span>
+            <span class="notifaction" id="shopCount">0</span>
         </button>
 
     </div> 

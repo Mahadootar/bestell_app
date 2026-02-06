@@ -6,6 +6,7 @@ function init() {
 }
 
 const delivery_Fee = 4.99;
+let cartAcount = 0;
 
 /* in this function the the dishes are rendert in to the page */
 function renderAll() {
@@ -36,6 +37,7 @@ function renderBasket() {
   const subtotal = renderTheBasketDishes();
   calculatethePrice(subtotal);
 }
+
 /* this function shows the empty basket */
 function emptyBasket() {
   const emptyRef = document.getElementById("basket_empty");
@@ -103,6 +105,7 @@ function addToBasket(catIndex, dishesIndex) {
   saveBasketToLocalStorage();
   renderBasket();
 }
+
 /* by this function it is posible to remove/delete a dishes from basket */
 function removeBasket(i) {
   cartShopping.splice(i, 1);
@@ -150,27 +153,33 @@ function restartTheBasket() {
   cartShopping.length = 0;
   localStorage.removeItem("cartShopping");
 }
+
 /* this function close the overlay */
 function closeOverlay() {
   const closeOverlayRef = document.getElementById("overlay_sec");
   const basket = document.getElementById("basketHide");
   const aotContainer = document.getElementById("aot-img-hero-container");
+  let addTotheShop = document.getElementById('shopCount');
 
   closeOverlayRef.style.display = "none";
   basket.style.display = "";
   aotContainer.style.width = "100%";
+  addTotheShop.style.display = "";
   openBasket();
   renderBasket();
 }
+
 /* in the mediaquerry section this function enables us to open and close the basket*/
 function openBasket() {
   document.querySelector(".basket-section").classList.toggle("active");
   const basket = document.querySelector(".basket-section");
 }
+
 /* this function saves the basket in the local storage */
 function saveBasketToLocalStorage() {
   localStorage.setItem("cartShopping", JSON.stringify(cartShopping));
 }
+
 /* this function gets the basket from the local storage */
 function getFromLocalStorage() {
   let cartShoppingArray = JSON.parse(localStorage.getItem("cartShopping"));
@@ -181,6 +190,15 @@ function getFromLocalStorage() {
 }
 
 /* this function stops the bubble that is created when the add button is click to close the basket*/
-function stobBubble(event) {
+function stopBubble(event) {
   event.stopPropagation();
+}
+
+/* this function count how much carts is in the cart*/
+function addToTheShopingList(){
+  cartAcount++;
+
+  let addTotheShop = document.getElementById('shopCount');
+  addTotheShop.textContent = cartAcount;
+  addTotheShop.style.display = "flex";
 }
