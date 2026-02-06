@@ -19,6 +19,7 @@ main{
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    justify-content: space-evenly;
 }
 
 .hero-section{
@@ -40,6 +41,10 @@ main{
     align-items: flex-end;
     margin-top: 30px;
 
+}
+
+.firstSection{
+    width: calc(100% - 430px);
 }
 
 .footer_content{
@@ -75,7 +80,7 @@ h1{
 
 h2{
     font-family: palanquin;
-    font-size: xx-large;
+    font-size: x-large;
     color: black;
 
 }
@@ -147,7 +152,8 @@ h2{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 250px;
+    justify-content: center;
+    gap: 50px;
     margin: 20px 0px;
 }
 
@@ -246,3 +252,20 @@ h2{
     display: none;
 }
 
+#burger_category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pizza_category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#salad_category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

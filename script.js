@@ -194,7 +194,7 @@ function stopBubble(event) {
   event.stopPropagation();
 }
 
-/* this function count how much carts is in the cart*/
+/* this function counts how much is in the cart*/
 function addToTheShopingList(){
   cartAcount++;
 

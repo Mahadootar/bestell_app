@@ -156,6 +156,10 @@
     
     }
 
+    .firstSection{
+    width: calc(100% - 0px);
+}
+
 .the_container_con_name {
     margin-bottom: 0;
     } 
@@ -304,6 +308,22 @@
     width: 290px;
    }
 }
+
+@media(max-width: 370px){
+    .basket_content{
+    background-color: #363534;
+    width: 270px;
+    min-height: 760px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    position: sticky;
+    top: 0px;
+   }
+}
+    
 
 @media(max-width: 320px){
     .dish_bottom{
